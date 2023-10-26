@@ -1,0 +1,11 @@
+{
+    "name": "n-util",
+    "url": "https://github.com/Noam-dv/n-util",
+    "license": "MIT",
+    "tags": ["Utility", "Efficiency"],
+    "description": "A library used to simplify coding tasks. Includes methods like Quick'X' that configure instances of objects in one line.",
+    "version": "0.1.0",
+    "classPath": "src/",
+    "releaseNote": "This is an experimental release, Pretty much like a demo.",
+    "contributors": ["Noam-dv"]
+}

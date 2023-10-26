@@ -1,4 +1,4 @@
-package nom.shaders;
+package nutil.shaders;
 
 import flixel.FlxCamera;
 import flixel.FlxSprite;
