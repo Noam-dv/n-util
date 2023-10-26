@@ -122,6 +122,37 @@ class QuickCalls {
         return sprite;
     }
 
+
+    public static function quickParticleEmitter(
+        x:Float = 0,
+        y:Float = 0,
+        width:Float = 1280,
+        height:Float = 720,
+        particleClass:Dynamic,
+        maxParticles:Int = 10,
+        particleLifespan:Float = 3,
+        autoBuffer:Bool = false,
+        frequency:Float = 0.1,
+        ?gravity:FlxPoint = null,
+        ?blend:BlendMode = null
+    ):FlxEmitter {
+        var emitter:FlxEmitter = new FlxEmitter(x, y, maxParticles);
+
+        emitter.width = width;
+        emitter.height = height;
+        emitter.particleClass = particleClass;
+        emitter.lifespan = particleLifespan;
+        emitter.frequency = frequency;
+
+        if (gravity != null) emitter.gravity = gravity;
+        if (blend != null) emitter.blend = blend;
+
+        emitter.autoBuffer = autoBuffer;
+
+        return emitter;
+    }
+
+    
     /**
      * Create and configure an animated FlxSprite object.
      *
@@ -151,35 +182,7 @@ class QuickCalls {
 }
 /*   WORK - IN - PROGRESS
 
-   
-    public static function quickParticleEmitter(
-        x:Float = 0,
-        y:Float = 0,
-        width:Float = 1280,
-        height:Float = 720,
-        particleClass:Dynamic,
-        maxParticles:Int = 10,
-        particleLifespan:Float = 3,
-        autoBuffer:Bool = false,
-        frequency:Float = 0.1,
-        ?gravity:FlxPoint = null,
-        ?blend:BlendMode = null
-    ):FlxEmitter {
-        var emitter:FlxEmitter = new FlxEmitter(x, y, maxParticles);
 
-        emitter.width = width;
-        emitter.height = height;
-        emitter.particleClass = particleClass;
-        emitter.lifespan = particleLifespan;
-        emitter.frequency = frequency;
-
-        if (gravity != null) emitter.gravity = gravity;
-        if (blend != null) emitter.blend = blend;
-
-        emitter.autoBuffer = autoBuffer;
-
-        return emitter;
-    }
 
     public static function quickTilemap(
         mapData:Array<Array<Int>,
