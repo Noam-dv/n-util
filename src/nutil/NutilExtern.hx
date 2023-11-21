@@ -15,7 +15,6 @@ enum SET_TYPE(String) {
 interface NutilExtern {
     public var utilType(get,default):Null<String>;
     public function get_utilType():Null<String>;
-    public function set_utilType(value:Null<String>):Null<String>;
 
     public function new(_:Null<T>);
 
